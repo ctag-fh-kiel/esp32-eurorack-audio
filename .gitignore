@@ -1,0 +1,11 @@
+# files to ignore for git in board folder
+*.bak
+*.bck
+*.000
+*.lst
+*.net
+*.mdc
+*.dsn
+*.ses
+*-bak
+*.tmp
