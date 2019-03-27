@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ESP32-Eurorack-Audio-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -210,7 +211,7 @@ Connection ~ 6700 1950
 Wire Wire Line
 	6700 1950 6700 2000
 $Comp
-L ESP-Audio-rescue:SP0503BAHT-Power_Protection D401
+L ESP32-Eurorack-Audio-rescue:SP0503BAHT-Power_Protection-ESP-Audio-rescue D401
 U 1 1 5B682E0A
 P 5550 3300
 AR Path="/5B682E0A" Ref="D401"  Part="1" 
@@ -223,7 +224,7 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L ESP-Audio-rescue:SP0503BAHT-Power_Protection D402
+L ESP32-Eurorack-Audio-rescue:SP0503BAHT-Power_Protection-ESP-Audio-rescue D402
 U 1 1 5B682E68
 P 6500 3300
 AR Path="/5B682E68" Ref="D402"  Part="1" 

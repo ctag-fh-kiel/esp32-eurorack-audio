@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ESP32-Eurorack-Audio-cache
 EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693

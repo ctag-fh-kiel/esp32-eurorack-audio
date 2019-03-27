@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ESP32-Eurorack-Audio-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -412,7 +413,7 @@ $EndComp
 Wire Wire Line
 	3200 3250 3700 3250
 $Comp
-L ESP-Audio-rescue:SP0503BAHT-Power_Protection D302
+L ESP32-Eurorack-Audio-rescue:SP0503BAHT-Power_Protection-ESP-Audio-rescue D302
 U 1 1 5B67424B
 P 3550 4000
 AR Path="/5B67424B" Ref="D302"  Part="1" 

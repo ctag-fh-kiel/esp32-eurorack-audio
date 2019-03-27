@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ESP32-Eurorack-Audio-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -415,9 +416,11 @@ Wire Wire Line
 Text HLabel 2450 3350 0    50   Input ~ 0
 VIN
 $Comp
-L user:ADP7118 U602
+L ESP32-Eurorack-Audio-rescue:ADP7118-user U602
 U 1 1 5B683013
 P 3550 4000
+AR Path="/5B683013" Ref="U602"  Part="1" 
+AR Path="/5B69D53C/5B683013" Ref="U602"  Part="1" 
 F 0 "U602" H 3925 4315 50  0000 C CNN
 F 1 "ADP7118" H 3925 4224 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 3900 3650 50  0001 C CNN
