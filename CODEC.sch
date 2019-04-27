@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 7 8
 Title "ESP32 Eurorack Audio Module"
 Date "2019-03-27"
-Rev "B2-public"
+Rev "C"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -740,12 +740,6 @@ F 3 "" H 6650 1500 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	7350 1400 7100 1400
-Wire Wire Line
-	7350 2850 7250 2850
-Wire Wire Line
-	7250 2850 7250 1500
-Wire Wire Line
-	7250 1500 7100 1500
 $Comp
 L jack_2p:JACK_2P J?
 U 1 1 5B7681E2
@@ -759,9 +753,6 @@ F 3 "" H 6650 2950 50  0000 C CNN
 	1    6650 2950
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	7250 2850 7100 2850
-Connection ~ 7250 2850
 $Comp
 L power:GND #PWR0706
 U 1 1 5B76D30D
@@ -1456,4 +1447,11 @@ Wire Notes Line
 	2350 1400 2350 550 
 Wire Notes Line
 	2350 550  500  550 
+Wire Wire Line
+	7100 2850 7350 2850
+Wire Wire Line
+	7100 1500 7150 1500
+Wire Wire Line
+	7150 1500 7150 1650
+Connection ~ 7150 1650
 $EndSCHEMATC

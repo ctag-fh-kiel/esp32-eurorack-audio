@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 5 8
 Title "ESP32 Eurorack Audio Module"
 Date "2019-03-27"
-Rev "B2-public"
+Rev "C"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -136,33 +136,33 @@ Wire Wire Line
 $Comp
 L Device:R R502
 U 1 1 5B68F96E
-P 3100 4400
-F 0 "R502" H 3170 4446 50  0000 L CNN
-F 1 "10k" H 3170 4355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3030 4400 50  0001 C CNN
-F 3 "~" H 3100 4400 50  0001 C CNN
-	1    3100 4400
+P 2550 4400
+F 0 "R502" H 2620 4446 50  0000 L CNN
+F 1 "10k" H 2620 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2480 4400 50  0001 C CNN
+F 3 "~" H 2550 4400 50  0001 C CNN
+	1    2550 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 4700 3100 4700
+	3400 4700 2550 4700
 Wire Wire Line
-	3100 4700 3100 4550
+	2550 4700 2550 4550
 $Comp
 L Device:R R501
 U 1 1 5B68FC31
-P 2800 4400
-F 0 "R501" H 2870 4446 50  0000 L CNN
-F 1 "10k" H 2870 4355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2730 4400 50  0001 C CNN
-F 3 "~" H 2800 4400 50  0001 C CNN
-	1    2800 4400
+P 2150 4400
+F 0 "R501" H 2220 4446 50  0000 L CNN
+F 1 "10k" H 2220 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 4400 50  0001 C CNN
+F 3 "~" H 2150 4400 50  0001 C CNN
+	1    2150 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 4900 2800 4900
+	3400 4900 2150 4900
 Wire Wire Line
-	2800 4900 2800 4550
+	2150 4900 2150 4550
 $Comp
 L Device:R R503
 U 1 1 5B68FF46
@@ -181,42 +181,40 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0504
 U 1 1 5B6902D6
-P 2800 4100
-F 0 "#PWR0504" H 2800 3950 50  0001 C CNN
-F 1 "+3V3" H 2815 4273 50  0000 C CNN
-F 2 "" H 2800 4100 50  0001 C CNN
-F 3 "" H 2800 4100 50  0001 C CNN
-	1    2800 4100
+P 2150 4100
+F 0 "#PWR0504" H 2150 3950 50  0001 C CNN
+F 1 "+3V3" H 2165 4273 50  0000 C CNN
+F 2 "" H 2150 4100 50  0001 C CNN
+F 3 "" H 2150 4100 50  0001 C CNN
+	1    2150 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 4100 2800 4150
+	2150 4100 2150 4150
 Wire Wire Line
 	4200 4250 4200 4150
 Wire Wire Line
-	4200 4150 3100 4150
-Connection ~ 2800 4150
+	4200 4150 2550 4150
+Connection ~ 2150 4150
 Wire Wire Line
-	2800 4150 2800 4250
+	2150 4150 2150 4250
 Wire Wire Line
-	3100 4250 3100 4150
-Connection ~ 3100 4150
+	2550 4250 2550 4150
+Connection ~ 2550 4150
 Wire Wire Line
-	3100 4150 2800 4150
+	2550 4150 2150 4150
 Text HLabel 4850 4700 2    50   Output ~ 0
 ENC_BTN
 Wire Wire Line
 	4850 4700 4200 4700
 Connection ~ 4200 4700
 Wire Wire Line
-	2800 4900 2400 4900
-Connection ~ 2800 4900
-Wire Wire Line
-	3100 4700 2400 4700
-Connection ~ 3100 4700
-Text HLabel 2400 4700 0    50   Output ~ 0
+	2150 4900 1750 4900
+Connection ~ 2150 4900
+Connection ~ 2550 4700
+Text HLabel 1750 4700 0    50   Output ~ 0
 ENC_A
-Text HLabel 2400 4900 0    50   Output ~ 0
+Text HLabel 1750 4900 0    50   Output ~ 0
 ENC_B
 Text Label 3800 2700 0    50   ~ 0
 CS
@@ -228,9 +226,9 @@ Text Label 3800 3300 0    50   ~ 0
 MISO
 Text Label 3800 3100 0    50   ~ 0
 SCK
-Text Label 2500 4700 0    50   ~ 0
+Text Label 1850 4700 0    50   ~ 0
 ENC_A
-Text Label 2500 4900 0    50   ~ 0
+Text Label 1850 4900 0    50   ~ 0
 ENC_B
 Text Label 4400 4700 0    50   ~ 0
 ENC_BTN
@@ -279,6 +277,52 @@ Wire Wire Line
 	3400 3650 3400 3700
 Text Notes 2500 3350 1    50   ~ 0
 MDF7-9S-2.54DSA(55) and\nMDF7-5S-2.54DSA(55)
-Text Notes 1950 5400 0    50   ~ 0
-Better with additional de-bounce caps 100nF, retro fit 2 of them between A+C and B+C.
+$Comp
+L Device:C C504
+U 1 1 5CA39CAD
+P 2550 5200
+F 0 "C504" H 2435 5154 50  0000 R CNN
+F 1 "100n" H 2435 5245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2588 5050 50  0001 C CNN
+F 3 "~" H 2550 5200 50  0001 C CNN
+	1    2550 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2550 4700 2550 5050
+$Comp
+L Device:C C503
+U 1 1 5CA3E66E
+P 2150 5200
+F 0 "C503" H 2035 5154 50  0000 R CNN
+F 1 "100n" H 2035 5245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2188 5050 50  0001 C CNN
+F 3 "~" H 2150 5200 50  0001 C CNN
+	1    2150 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 4900 2150 5050
+$Comp
+L power:GND #PWR0502
+U 1 1 5CA3F1C4
+P 2550 5500
+F 0 "#PWR0502" H 2550 5250 50  0001 C CNN
+F 1 "GND" H 2555 5327 50  0000 C CNN
+F 2 "" H 2550 5500 50  0001 C CNN
+F 3 "" H 2550 5500 50  0001 C CNN
+	1    2550 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 5350 2150 5450
+Wire Wire Line
+	2150 5450 2550 5450
+Wire Wire Line
+	2550 5450 2550 5500
+Wire Wire Line
+	2550 5350 2550 5450
+Connection ~ 2550 5450
+Wire Wire Line
+	1750 4700 2550 4700
 $EndSCHEMATC

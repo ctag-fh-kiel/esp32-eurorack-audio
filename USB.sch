@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 3 8
 Title "ESP32 Eurorack Audio Module"
 Date "2019-03-27"
-Rev "B2-public"
+Rev "C"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -450,7 +450,7 @@ L Device:Ferrite_Bead L301
 U 1 1 5BA0FB2D
 P 2900 4300
 F 0 "L301" H 3037 4346 50  0000 L CNN
-F 1 "600" H 3037 4255 50  0000 L CNN
+F 1 "0" H 3037 4255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" V 2830 4300 50  0001 C CNN
 F 3 "~" H 2900 4300 50  0001 C CNN
 	1    2900 4300

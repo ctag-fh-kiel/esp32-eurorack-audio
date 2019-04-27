@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 4 8
 Title "ESP32 Eurorack Audio Module"
 Date "2019-03-27"
-Rev "B2-public"
+Rev "C"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"

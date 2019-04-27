@@ -6,8 +6,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 8 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-03-27"
-Rev "B2-public"
+Date "2019-04-27"
+Rev "C2"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -139,7 +139,7 @@ L Device:R R801
 U 1 1 5B6BF14F
 P 3650 2100
 F 0 "R801" H 3580 2054 50  0000 R CNN
-F 1 "10k" H 3580 2145 50  0000 R CNN
+F 1 "0" H 3580 2145 50  0000 R CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3580 2100 50  0001 C CNN
 F 3 "~" H 3650 2100 50  0001 C CNN
 	1    3650 2100
@@ -294,7 +294,7 @@ L Device:R R814
 U 1 1 5B6C0356
 P 3600 4450
 F 0 "R814" H 3530 4404 50  0000 R CNN
-F 1 "10k" H 3530 4495 50  0000 R CNN
+F 1 "0" H 3530 4495 50  0000 R CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3530 4450 50  0001 C CNN
 F 3 "~" H 3600 4450 50  0001 C CNN
 	1    3600 4450
@@ -1395,12 +1395,12 @@ $EndComp
 $Comp
 L jack_2p:JACK_2P J809
 U 1 1 5B9A8472
-P 6500 8400
-F 0 "J809" H 6022 8384 50  0000 R CNN
-F 1 "CVIN4" H 6022 8475 50  0000 R CNN
-F 2 "connectors:THONKICONN" H 6500 8400 50  0001 C CNN
-F 3 "" H 6500 8400 50  0000 C CNN
-	1    6500 8400
+P 10300 6800
+F 0 "J809" H 9822 6784 50  0000 R CNN
+F 1 "CVIN6" H 9822 6875 50  0000 R CNN
+F 2 "connectors:THONKICONN" H 10300 6800 50  0001 C CNN
+F 3 "" H 10300 6800 50  0000 C CNN
+	1    10300 6800
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -1573,12 +1573,12 @@ $EndComp
 $Comp
 L jack_2p:JACK_2P J808
 U 1 1 5B9B27D5
-P 10300 6800
-F 0 "J808" H 9822 6784 50  0000 R CNN
-F 1 "CVIN4" H 9822 6875 50  0000 R CNN
-F 2 "connectors:THONKICONN" H 10300 6800 50  0001 C CNN
-F 3 "" H 10300 6800 50  0000 C CNN
-	1    10300 6800
+P 6500 8400
+F 0 "J808" H 6022 8384 50  0000 R CNN
+F 1 "CVIN5" H 6022 8475 50  0000 R CNN
+F 2 "connectors:THONKICONN" H 6500 8400 50  0001 C CNN
+F 3 "" H 6500 8400 50  0000 C CNN
+	1    6500 8400
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -1753,7 +1753,7 @@ L jack_2p:JACK_2P J810
 U 1 1 5B9B2836
 P 10300 8400
 F 0 "J810" H 9822 8384 50  0000 R CNN
-F 1 "CVIN4" H 9822 8475 50  0000 R CNN
+F 1 "CVIN7" H 9822 8475 50  0000 R CNN
 F 2 "connectors:THONKICONN" H 10300 8400 50  0001 C CNN
 F 3 "" H 10300 8400 50  0000 C CNN
 	1    10300 8400
@@ -1896,12 +1896,6 @@ Text Label 1950 8150 0    50   ~ 0
 CVIN6
 Text Label 1950 8250 0    50   ~ 0
 CVIN7
-Wire Wire Line
-	3600 7750 3750 7750
-Wire Wire Line
-	3600 7950 4050 7950
-Wire Wire Line
-	3600 8050 4200 8050
 Text HLabel 4300 7750 2    50   Input ~ 0
 MCP_CLK
 Text HLabel 4300 7950 2    50   Output ~ 0
@@ -1973,54 +1967,6 @@ F 3 "" H 1750 9300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1750 9250 1750 9300
-$Comp
-L Connector:TestPoint TP801
-U 1 1 5BDED682
-P 3750 7650
-F 0 "TP801" H 3700 8000 50  0000 L CNN
-F 1 "TA" H 3700 7900 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Keystone_5019_Minature" H 3950 7650 50  0001 C CNN
-F 3 "~" H 3950 7650 50  0001 C CNN
-	1    3750 7650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP802
-U 1 1 5BE10843
-P 4050 7650
-F 0 "TP802" V 3950 7650 50  0000 L CNN
-F 1 "TB" H 4000 7900 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Keystone_5019_Minature" H 4250 7650 50  0001 C CNN
-F 3 "~" H 4250 7650 50  0001 C CNN
-	1    4050 7650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP803
-U 1 1 5BE108EF
-P 4200 7650
-F 0 "TP803" H 4150 8000 50  0000 L CNN
-F 1 "TC" H 4150 7900 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Keystone_5019_Minature" H 4400 7650 50  0001 C CNN
-F 3 "~" H 4400 7650 50  0001 C CNN
-	1    4200 7650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3750 7650 3750 7750
-Connection ~ 3750 7750
-Wire Wire Line
-	3750 7750 4300 7750
-Wire Wire Line
-	4050 7650 4050 7950
-Connection ~ 4050 7950
-Wire Wire Line
-	4050 7950 4300 7950
-Wire Wire Line
-	4200 7650 4200 8050
-Connection ~ 4200 8050
-Wire Wire Line
-	4200 8050 4300 8050
 Wire Wire Line
 	3600 7850 4300 7850
 $Comp
@@ -2058,4 +2004,10 @@ F 3 "" H 1750 8900 50  0001 C CNN
 $EndComp
 Text Notes 6100 9550 0    50   ~ 0
 This section is pretty much taken from \nMutable Instruments Clouds (c) Olivier Gillet
+Wire Wire Line
+	3600 8050 4300 8050
+Wire Wire Line
+	3600 7950 4300 7950
+Wire Wire Line
+	3600 7750 4300 7750
 $EndSCHEMATC
