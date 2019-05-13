@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-03-27"
-Rev "C"
+Date "2019-05-13"
+Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -201,8 +201,6 @@ F 3 "" H 2800 2400 50  0001 C CNN
 	1    2800 2400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2800 2400 2800 2550
 $Comp
 L power:+3.3V #PWR0613
 U 1 1 5B6A0578
@@ -240,8 +238,6 @@ F 3 "" H 6400 1200 50  0001 C CNN
 	1    6400 1200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6400 1200 6400 1350
 $Comp
 L power:GND #PWR0609
 U 1 1 5B6A10CC
@@ -352,7 +348,7 @@ L Device:LED D604
 U 1 1 5B6A709D
 P 6350 3000
 F 0 "D604" V 6388 2882 50  0000 R CNN
-F 1 "APTD3216SURCK" V 6297 2882 50  0000 R CNN
+F 1 "~" V 6297 2882 50  0000 R CNN
 F 2 "LED_THT:LED_D5.0mm_Clear" H 6350 3000 50  0001 C CNN
 F 3 "~" H 6350 3000 50  0001 C CNN
 	1    6350 3000
@@ -380,30 +376,11 @@ Wire Wire Line
 Wire Wire Line
 	6350 3250 5500 3250
 Connection ~ 5500 3250
-$Comp
-L Jumper:Jumper_3_Bridged12 JP601
-U 1 1 5B6ADE26
-P 2800 2800
-F 0 "JP601" V 2754 2867 50  0000 L CNN
-F 1 "VSEL" V 2845 2867 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2800 2800 50  0001 C CNN
-F 3 "~" H 2800 2800 50  0001 C CNN
-	1    2800 2800
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	3250 2800 3250 4000
-Wire Wire Line
-	2950 2800 3250 2800
 Connection ~ 3250 2800
 Wire Wire Line
 	3250 2800 3400 2800
-Wire Wire Line
-	2800 3050 2800 3350
-Wire Wire Line
-	2800 3350 2450 3350
-Text HLabel 2450 3350 0    50   Input ~ 0
-VIN
 $Comp
 L ESP32-Eurorack-Audio-rescue:ADP7118-user U602
 U 1 1 5B683013
@@ -530,24 +507,6 @@ Connection ~ 7050 1950
 Wire Wire Line
 	7050 1950 7050 2000
 $Comp
-L power:PWR_FLAG #FLG0601
-U 1 1 5B9057C9
-P 6100 1300
-F 0 "#FLG0601" H 6100 1375 50  0001 C CNN
-F 1 "PWR_FLAG" H 6100 1474 50  0000 C CNN
-F 2 "" H 6100 1300 50  0001 C CNN
-F 3 "~" H 6100 1300 50  0001 C CNN
-	1    6100 1300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 1350 6100 1350
-Wire Wire Line
-	6100 1350 6100 1300
-Connection ~ 6400 1350
-Wire Wire Line
-	6400 1350 6400 1400
-$Comp
 L Device:R R601
 U 1 1 5B91EBF6
 P 8450 1900
@@ -610,8 +569,6 @@ F 3 "~" H 9350 1350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9350 1500 9350 1650
-Wire Wire Line
-	9350 1650 9150 1650
 Connection ~ 8450 1650
 Wire Wire Line
 	8450 1650 8450 1750
@@ -651,22 +608,6 @@ Wire Wire Line
 	9350 1650 9900 1650
 Wire Wire Line
 	9900 1650 9900 1600
-$Comp
-L Connector:TestPoint TP602
-U 1 1 5B6D7C4D
-P 9150 1600
-F 0 "TP602" H 9093 1720 50  0000 R CNN
-F 1 "TestPoint" H 9093 1629 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Keystone_5019_Minature" H 9350 1600 50  0001 C CNN
-F 3 "~" H 9350 1600 50  0001 C CNN
-	1    9150 1600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9150 1600 9150 1650
-Connection ~ 9150 1650
-Wire Wire Line
-	9150 1650 8450 1650
 $Comp
 L Regulator_Linear:L7805 U601
 U 1 1 5CA2059B
@@ -741,4 +682,12 @@ F 3 "~" H 5300 2650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5100 2650 5100 2800
+Wire Wire Line
+	8450 1650 9350 1650
+Wire Wire Line
+	2800 2800 2800 2400
+Wire Wire Line
+	2800 2800 3250 2800
+Wire Wire Line
+	6400 1200 6400 1400
 $EndSCHEMATC

@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-03-27"
-Rev "C"
+Date "2019-05-13"
+Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -169,47 +169,7 @@ Wire Wire Line
 	6900 3350 7300 3350
 Text Label 7300 3250 2    50   ~ 0
 IO0
-$Comp
-L Switch:SW_Push_Dual SW201
-U 1 1 5B6725D5
-P 3200 4900
-F 0 "SW201" H 3200 5185 50  0000 C CNN
-F 1 "EN" H 3200 5094 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 3200 5100 50  0001 C CNN
-F 3 "" H 3200 5100 50  0001 C CNN
-	1    3200 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0206
-U 1 1 5B6725E1
-P 2800 5550
-F 0 "#PWR0206" H 2800 5300 50  0001 C CNN
-F 1 "GND" H 2805 5377 50  0000 C CNN
-F 2 "" H 2800 5550 50  0001 C CNN
-F 3 "" H 2800 5550 50  0001 C CNN
-	1    2800 5550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3000 4900 2800 4900
-Wire Wire Line
-	2800 4900 2800 5100
-Wire Wire Line
-	3000 5100 2800 5100
-Connection ~ 2800 5100
-Wire Wire Line
-	3400 4900 3650 4900
-Wire Wire Line
-	3650 4900 3650 5100
-Wire Wire Line
-	3400 5100 3650 5100
-Wire Wire Line
-	3650 4900 3900 4900
-Connection ~ 3650 4900
 Text Label 4850 2150 0    50   ~ 0
-EN
-Text Label 3900 4900 2    50   ~ 0
 EN
 Wire Wire Line
 	6900 2050 7300 2050
@@ -308,17 +268,6 @@ Text HLabel 7300 2050 2    50   BiDi ~ 0
 IO23
 Text HLabel 7300 2150 2    50   BiDi ~ 0
 IO22
-$Comp
-L Switch:SW_Push_Dual SW203
-U 1 1 5B689EE8
-P 4500 4900
-F 0 "SW203" H 4500 5185 50  0000 C CNN
-F 1 "FLASH" H 4500 5094 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 4500 5100 50  0001 C CNN
-F 3 "" H 4500 5100 50  0001 C CNN
-	1    4500 4900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2000 2550 2000 2700
 Wire Wire Line
@@ -333,226 +282,6 @@ NoConn ~ 5150 3650
 NoConn ~ 5150 3750
 Text Label 7300 3350 2    50   ~ 0
 IO2
-$Comp
-L Transistor_FET:BSS138 Q201
-U 1 1 5BDBC25C
-P 6500 4900
-F 0 "Q201" H 6705 4946 50  0000 L CNN
-F 1 "BSS138" H 6705 4855 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6700 4825 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 6500 4900 50  0001 L CNN
-	1    6500 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:BSS138 Q202
-U 1 1 5BDBC300
-P 6500 5850
-F 0 "Q202" H 6705 5896 50  0000 L CNN
-F 1 "BSS138" H 6705 5805 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6700 5775 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 6500 5850 50  0001 L CNN
-	1    6500 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0211
-U 1 1 5BDBC43E
-P 6600 5250
-F 0 "#PWR0211" H 6600 5000 50  0001 C CNN
-F 1 "GND" H 6605 5077 50  0000 C CNN
-F 2 "" H 6600 5250 50  0001 C CNN
-F 3 "" H 6600 5250 50  0001 C CNN
-	1    6600 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6600 5100 6600 5250
-$Comp
-L power:GND #PWR0213
-U 1 1 5BDBDC48
-P 6600 6200
-F 0 "#PWR0213" H 6600 5950 50  0001 C CNN
-F 1 "GND" H 6605 6027 50  0000 C CNN
-F 2 "" H 6600 6200 50  0001 C CNN
-F 3 "" H 6600 6200 50  0001 C CNN
-	1    6600 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6600 6050 6600 6200
-$Comp
-L Device:Jumper JP201
-U 1 1 5BDBF4D7
-P 7200 4550
-F 0 "JP201" H 7200 4814 50  0000 C CNN
-F 1 "Jumper" H 7200 4723 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7200 4550 50  0001 C CNN
-F 3 "~" H 7200 4550 50  0001 C CNN
-	1    7200 4550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6900 4550 6600 4550
-Wire Wire Line
-	6600 4550 6600 4700
-$Comp
-L Device:Jumper JP202
-U 1 1 5BDC0EEB
-P 7200 5550
-F 0 "JP202" H 7200 5814 50  0000 C CNN
-F 1 "Jumper" H 7200 5723 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7200 5550 50  0001 C CNN
-F 3 "~" H 7200 5550 50  0001 C CNN
-	1    7200 5550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6900 5550 6600 5550
-Wire Wire Line
-	6600 5550 6600 5650
-Wire Wire Line
-	7500 4550 7850 4550
-Wire Wire Line
-	7500 5550 7850 5550
-Text Label 7850 4550 2    50   ~ 0
-IO0
-Text Label 7850 5550 2    50   ~ 0
-IO2
-$Comp
-L Device:R R202
-U 1 1 5BDC7703
-P 5950 4900
-F 0 "R202" V 5743 4900 50  0000 C CNN
-F 1 "1k" V 5834 4900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5880 4900 50  0001 C CNN
-F 3 "~" H 5950 4900 50  0001 C CNN
-	1    5950 4900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6300 4900 6100 4900
-$Comp
-L Device:R R204
-U 1 1 5BDC9F6F
-P 5900 5850
-F 0 "R204" V 5693 5850 50  0000 C CNN
-F 1 "1k" V 5784 5850 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5830 5850 50  0001 C CNN
-F 3 "~" H 5900 5850 50  0001 C CNN
-	1    5900 5850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6300 5850 6050 5850
-$Comp
-L Device:R R203
-U 1 1 5BDCE362
-P 5250 5450
-F 0 "R203" H 5180 5404 50  0000 R CNN
-F 1 "10k" H 5180 5495 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5180 5450 50  0001 C CNN
-F 3 "~" H 5250 5450 50  0001 C CNN
-	1    5250 5450
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0212
-U 1 1 5BDCE41B
-P 5250 6200
-F 0 "#PWR0212" H 5250 5950 50  0001 C CNN
-F 1 "GND" H 5255 6027 50  0000 C CNN
-F 2 "" H 5250 6200 50  0001 C CNN
-F 3 "" H 5250 6200 50  0001 C CNN
-	1    5250 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 5600 5250 5850
-$Comp
-L Device:C C204
-U 1 1 5BDCF988
-P 4950 5450
-F 0 "C204" H 4600 5550 50  0000 L CNN
-F 1 "1n" H 4600 5450 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4988 5300 50  0001 C CNN
-F 3 "~" H 4950 5450 50  0001 C CNN
-	1    4950 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 4900 4950 4900
-Wire Wire Line
-	4700 5100 4950 5100
-Wire Wire Line
-	5700 5100 5700 5850
-Wire Wire Line
-	5700 5850 5750 5850
-Wire Wire Line
-	5250 5300 5250 5100
-Connection ~ 5250 5100
-Wire Wire Line
-	5250 5100 5700 5100
-Wire Wire Line
-	4950 5300 4950 5100
-Connection ~ 4950 5100
-Wire Wire Line
-	4950 5100 5250 5100
-Wire Wire Line
-	4950 5600 4950 5850
-Wire Wire Line
-	4950 5850 5250 5850
-Connection ~ 5250 5850
-Wire Wire Line
-	5250 5850 5250 6200
-Wire Wire Line
-	4950 5100 4950 4900
-Connection ~ 4950 4900
-Wire Wire Line
-	4950 4900 5800 4900
-$Comp
-L power:+3.3V #PWR0210
-U 1 1 5BDD9267
-P 4050 4600
-F 0 "#PWR0210" H 4050 4450 50  0001 C CNN
-F 1 "+3.3V" H 4065 4773 50  0000 C CNN
-F 2 "" H 4050 4600 50  0001 C CNN
-F 3 "" H 4050 4600 50  0001 C CNN
-	1    4050 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 5100 4050 5100
-Wire Wire Line
-	4050 5100 4050 4900
-Wire Wire Line
-	4300 4900 4050 4900
-Connection ~ 4050 4900
-Wire Wire Line
-	4050 4900 4050 4600
-$Comp
-L esp32:ESP32-WROVER U201
-U 1 1 5BE614AC
-P 6050 2750
-F 0 "U201" H 6025 4137 60  0000 C CNN
-F 1 "ESP32-WROVER" H 6025 4031 60  0000 C CNN
-F 2 "esp32:ESP32-WROVER" H 6500 2450 60  0001 C CNN
-F 3 "" H 6500 2450 60  0001 C CNN
-	1    6050 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2800 5100 2800 5550
-Text Notes 2950 6200 0    50   ~ 0
-Only required if testing, not required for production.\nComponents all on bottom side
-Wire Notes Line
-	2550 4100 2550 6500
-Wire Notes Line
-	2550 6500 8050 6500
-Wire Notes Line
-	8050 6500 8050 4100
-Wire Notes Line
-	8050 4100 2600 4100
 $Comp
 L special-ics:MIC803 U202
 U 1 1 5CA3F4DA
@@ -592,4 +321,15 @@ Wire Wire Line
 	2950 2550 2950 2700
 Wire Wire Line
 	3750 2150 3400 2150
+$Comp
+L esp32:ESP32-WROVER U201
+U 1 1 5BE614AC
+P 6050 2750
+F 0 "U201" H 6025 4137 60  0000 C CNN
+F 1 "ESP32-WROVER" H 6025 4031 60  0000 C CNN
+F 2 "esp32:ESP32-WROVER" H 6500 2450 60  0001 C CNN
+F 3 "" H 6500 2450 60  0001 C CNN
+	1    6050 2750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

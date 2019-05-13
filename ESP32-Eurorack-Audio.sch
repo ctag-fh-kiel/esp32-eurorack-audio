@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-03-27"
-Rev "C"
+Date "2019-05-13"
+Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -50,12 +50,11 @@ S 1550 2500 550  650
 U 5B81850F
 F0 "USB" 50
 F1 "USB.sch" 50
-F2 "EXT_5V" O R 2100 2600 50 
-F3 "EN" O R 2100 2700 50 
-F4 "IO0" O R 2100 2800 50 
-F5 "TXD" O R 2100 2900 50 
-F6 "RXD" I R 2100 3000 50 
-F7 "IO2" O R 2100 3100 50 
+F2 "EN" O R 2100 2700 50 
+F3 "IO0" O R 2100 2800 50 
+F4 "TXD" O R 2100 2900 50 
+F5 "RXD" I R 2100 3000 50 
+F6 "IO2" O R 2100 3100 50 
 $EndSheet
 Wire Wire Line
 	2100 2700 2550 2700
@@ -109,11 +108,10 @@ Wire Wire Line
 Wire Wire Line
 	2100 4700 2550 4700
 $Sheet
-S 2550 1900 550  250 
+S 1550 1850 550  250 
 U 5B69D53C
 F0 "PWR" 50
 F1 "PWR.sch" 50
-F2 "VIN" I L 2550 2000 50 
 $EndSheet
 $Sheet
 S 4800 2550 550  850 
@@ -128,12 +126,6 @@ F6 "DACDAT" I L 4800 3200 50
 F7 "LRCLK" I L 4800 3100 50 
 F8 "ADCDAT" O L 4800 3300 50 
 $EndSheet
-Wire Wire Line
-	2550 2000 2350 2000
-Wire Wire Line
-	2350 2000 2350 2600
-Wire Wire Line
-	2350 2600 2100 2600
 $Sheet
 S 4800 3700 550  750 
 U 5B6B8BDA
@@ -180,42 +172,6 @@ Wire Wire Line
 Connection ~ 4650 2750
 Wire Wire Line
 	4650 2750 4550 2750
-$Comp
-L Connector:Conn_01x01_Male FID1
-U 1 1 5B6E15CE
-P 1350 6750
-F 0 "FID1" H 1456 6837 50  0000 C CNN
-F 1 "~" H 1456 6837 50  0000 C CNN
-F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 1350 6750 50  0001 C CNN
-F 3 "~" H 1350 6750 50  0001 C CNN
-	1    1350 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male FID2
-U 1 1 5B6E1636
-P 1350 6900
-F 0 "FID2" H 1456 6987 50  0000 C CNN
-F 1 "~" H 1456 6987 50  0000 C CNN
-F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 1350 6900 50  0001 C CNN
-F 3 "~" H 1350 6900 50  0001 C CNN
-	1    1350 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male FID3
-U 1 1 5B6E165A
-P 1350 7050
-F 0 "FID3" H 1456 7137 50  0000 C CNN
-F 1 "~" H 1456 7137 50  0000 C CNN
-F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 1350 7050 50  0001 C CNN
-F 3 "~" H 1350 7050 50  0001 C CNN
-	1    1350 7050
-	1    0    0    -1  
-$EndComp
-NoConn ~ 1550 6750
-NoConn ~ 1550 6900
-NoConn ~ 1550 7050
 Text Label 4650 4200 0    50   ~ 0
 IO0
 Wire Wire Line
@@ -270,4 +226,37 @@ Wire Wire Line
 Connection ~ 2400 5400
 Wire Wire Line
 	2400 5400 2400 5750
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 5CD9B8CA
+P 1050 6300
+F 0 "FID1" H 1135 6346 50  0000 L CNN
+F 1 "Fiducial" H 1135 6255 50  0000 L CNN
+F 2 "" H 1050 6300 50  0001 C CNN
+F 3 "~" H 1050 6300 50  0001 C CNN
+	1    1050 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 5CD9C1AA
+P 1050 6500
+F 0 "FID2" H 1135 6546 50  0000 L CNN
+F 1 "Fiducial" H 1135 6455 50  0000 L CNN
+F 2 "" H 1050 6500 50  0001 C CNN
+F 3 "~" H 1050 6500 50  0001 C CNN
+	1    1050 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID3
+U 1 1 5CD9C2A4
+P 1050 6700
+F 0 "FID3" H 1135 6746 50  0000 L CNN
+F 1 "Fiducial" H 1135 6655 50  0000 L CNN
+F 2 "" H 1050 6700 50  0001 C CNN
+F 3 "~" H 1050 6700 50  0001 C CNN
+	1    1050 6700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

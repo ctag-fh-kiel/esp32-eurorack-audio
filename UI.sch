@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-03-27"
-Rev "C"
+Date "2019-05-13"
+Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -276,7 +276,7 @@ $EndComp
 Wire Wire Line
 	3400 3650 3400 3700
 Text Notes 2500 3350 1    50   ~ 0
-MDF7-9S-2.54DSA(55) and\nMDF7-5S-2.54DSA(55)
+MDF7-9S-2.54DSA(55)
 $Comp
 L Device:C C504
 U 1 1 5CA39CAD
@@ -325,4 +325,34 @@ Wire Wire Line
 Connection ~ 2550 5450
 Wire Wire Line
 	1750 4700 2550 4700
+$Comp
+L Device:C C505
+U 1 1 5CDB2DC9
+P 4500 5200
+F 0 "C505" H 4385 5154 50  0000 R CNN
+F 1 "100n" H 4385 5245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4538 5050 50  0001 C CNN
+F 3 "~" H 4500 5200 50  0001 C CNN
+	1    4500 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5CDB35D2
+P 4500 5450
+F 0 "#PWR0111" H 4500 5200 50  0001 C CNN
+F 1 "GND" H 4505 5277 50  0000 C CNN
+F 2 "" H 4500 5450 50  0001 C CNN
+F 3 "" H 4500 5450 50  0001 C CNN
+	1    4500 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5350 4500 5450
+Wire Wire Line
+	4200 4700 4200 4850
+Wire Wire Line
+	4200 4850 4500 4850
+Wire Wire Line
+	4500 4850 4500 5050
 $EndSCHEMATC

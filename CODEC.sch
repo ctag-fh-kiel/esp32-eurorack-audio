@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-03-27"
-Rev "C"
+Date "2019-05-13"
+Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"

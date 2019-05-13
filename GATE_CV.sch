@@ -6,8 +6,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 8 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-04-27"
-Rev "C2"
+Date "2019-05-13"
+Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -110,14 +110,9 @@ Wire Wire Line
 Wire Wire Line
 	2600 3050 2600 3200
 Connection ~ 2600 3200
-Wire Wire Line
-	3850 2650 3650 2650
 Connection ~ 3300 2650
 Wire Wire Line
 	3300 2650 3300 2750
-Connection ~ 3650 2650
-Wire Wire Line
-	3650 2650 3300 2650
 $Comp
 L power:GND #PWR0804
 U 1 1 5B6BEA90
@@ -135,40 +130,26 @@ Connection ~ 4550 2650
 Wire Wire Line
 	4550 2650 4550 2950
 $Comp
-L Device:R R801
-U 1 1 5B6BF14F
-P 3650 2100
-F 0 "R801" H 3580 2054 50  0000 R CNN
-F 1 "0" H 3580 2145 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3580 2100 50  0001 C CNN
-F 3 "~" H 3650 2100 50  0001 C CNN
-	1    3650 2100
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:C C801
 U 1 1 5B6BF2F0
-P 4050 1700
-F 0 "C801" V 3798 1700 50  0000 C CNN
-F 1 "100n" V 3889 1700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4088 1550 50  0001 C CNN
-F 3 "~" H 4050 1700 50  0001 C CNN
-	1    4050 1700
+P 4050 2100
+F 0 "C801" V 3798 2100 50  0000 C CNN
+F 1 "100n" V 3889 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4088 1950 50  0001 C CNN
+F 3 "~" H 4050 2100 50  0001 C CNN
+	1    4050 2100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3900 1700 3650 1700
+	3900 2100 3650 2100
 Wire Wire Line
-	3650 1700 3650 1950
-Wire Wire Line
-	4200 1700 4550 1700
-Text HLabel 3900 1250 2    50   Output ~ 0
+	4200 2100 4550 2100
+Text HLabel 3900 1650 2    50   Output ~ 0
 TRG0
 Wire Wire Line
-	3900 1250 3650 1250
+	3900 1650 3650 1650
 Wire Wire Line
-	3650 1250 3650 1700
-Connection ~ 3650 1700
+	3650 1650 3650 2100
 $Comp
 L jack_2p:JACK_2P J806
 U 1 1 5B6C030A
@@ -265,14 +246,9 @@ Wire Wire Line
 Wire Wire Line
 	2550 5400 2550 5550
 Connection ~ 2550 5550
-Wire Wire Line
-	3800 5000 3600 5000
 Connection ~ 3250 5000
 Wire Wire Line
 	3250 5000 3250 5100
-Connection ~ 3600 5000
-Wire Wire Line
-	3600 5000 3250 5000
 $Comp
 L power:GND #PWR0820
 U 1 1 5B6C034B
@@ -290,40 +266,26 @@ Connection ~ 4500 5000
 Wire Wire Line
 	4500 5000 4500 5300
 $Comp
-L Device:R R814
-U 1 1 5B6C0356
-P 3600 4450
-F 0 "R814" H 3530 4404 50  0000 R CNN
-F 1 "0" H 3530 4495 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3530 4450 50  0001 C CNN
-F 3 "~" H 3600 4450 50  0001 C CNN
-	1    3600 4450
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:C C807
 U 1 1 5B6C035E
-P 4000 4050
-F 0 "C807" V 3748 4050 50  0000 C CNN
-F 1 "100n" V 3839 4050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4038 3900 50  0001 C CNN
-F 3 "~" H 4000 4050 50  0001 C CNN
-	1    4000 4050
+P 4000 4450
+F 0 "C807" V 3748 4450 50  0000 C CNN
+F 1 "100n" V 3839 4450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4038 4300 50  0001 C CNN
+F 3 "~" H 4000 4450 50  0001 C CNN
+	1    4000 4450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3850 4050 3600 4050
+	3850 4450 3600 4450
 Wire Wire Line
-	3600 4050 3600 4300
-Wire Wire Line
-	4150 4050 4500 4050
-Text HLabel 3850 3600 2    50   Output ~ 0
+	4150 4450 4500 4450
+Text HLabel 3850 4000 2    50   Output ~ 0
 TRG1
 Wire Wire Line
-	3850 3600 3600 3600
+	3850 4000 3600 4000
 Wire Wire Line
-	3600 3600 3600 4050
-Connection ~ 3600 4050
+	3600 4000 3600 4450
 $Comp
 L Switch:SW_Push SW801
 U 1 1 5B6C1517
@@ -347,13 +309,9 @@ F 3 "" H 4000 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 4050 4500 5000
+	4500 4450 4500 5000
 Wire Wire Line
-	3600 4600 3600 5000
-Wire Wire Line
-	3650 2250 3650 2650
-Wire Wire Line
-	4550 1700 4550 2650
+	4550 2100 4550 2650
 $Comp
 L Amplifier_Operational:MCP6004 U801
 U 1 1 5B917F57
@@ -2010,4 +1968,20 @@ Wire Wire Line
 	3600 7950 4300 7950
 Wire Wire Line
 	3600 7750 4300 7750
+Wire Wire Line
+	3300 2650 3650 2650
+Wire Wire Line
+	3650 2100 3650 2650
+Connection ~ 3650 2100
+Connection ~ 3650 2650
+Wire Wire Line
+	3650 2650 3850 2650
+Wire Wire Line
+	3250 5000 3600 5000
+Wire Wire Line
+	3600 4450 3600 5000
+Connection ~ 3600 4450
+Connection ~ 3600 5000
+Wire Wire Line
+	3600 5000 3800 5000
 $EndSCHEMATC

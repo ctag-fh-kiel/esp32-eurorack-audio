@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-03-27"
-Rev "C"
+Date "2019-05-13"
+Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment2 "Licensed under CC BY-NC-SA 4.0"
@@ -110,8 +110,6 @@ Wire Wire Line
 Wire Wire Line
 	5950 2700 5950 1850
 Wire Wire Line
-	4700 2800 5550 2800
-Wire Wire Line
 	6200 2800 6200 1850
 $Comp
 L power:+3V3 #PWR0401
@@ -143,14 +141,8 @@ Wire Wire Line
 Connection ~ 5950 1450
 Wire Wire Line
 	5950 1450 5700 1450
-Wire Wire Line
-	5450 2300 6500 2300
 Connection ~ 5450 2300
-Wire Wire Line
-	5700 2500 6400 2500
 Connection ~ 5700 2500
-Wire Wire Line
-	5950 2700 6600 2700
 Connection ~ 5950 2700
 Text HLabel 6700 2300 2    50   BiDi ~ 0
 D0
@@ -211,75 +203,6 @@ Connection ~ 6700 1950
 Wire Wire Line
 	6700 1950 6700 2000
 $Comp
-L ESP32-Eurorack-Audio-rescue:SP0503BAHT-Power_Protection-ESP-Audio-rescue D401
-U 1 1 5B682E0A
-P 5550 3300
-AR Path="/5B682E0A" Ref="D401"  Part="1" 
-AR Path="/5B67C7FC/5B682E0A" Ref="D401"  Part="1" 
-F 0 "D401" H 5755 3346 50  0000 L CNN
-F 1 "SP0503BAHT" H 5755 3255 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-143" H 5775 3250 50  0001 L CNN
-F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 5675 3425 50  0001 C CNN
-	1    5550 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L ESP32-Eurorack-Audio-rescue:SP0503BAHT-Power_Protection-ESP-Audio-rescue D402
-U 1 1 5B682E68
-P 6500 3300
-AR Path="/5B682E68" Ref="D402"  Part="1" 
-AR Path="/5B67C7FC/5B682E68" Ref="D402"  Part="1" 
-F 0 "D402" H 6705 3346 50  0000 L CNN
-F 1 "SP0503BAHT" H 6705 3255 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-143" H 6725 3250 50  0001 L CNN
-F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 6625 3425 50  0001 C CNN
-	1    6500 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0408
-U 1 1 5B682EC3
-P 5550 3650
-F 0 "#PWR0408" H 5550 3400 50  0001 C CNN
-F 1 "GND" H 5555 3477 50  0000 C CNN
-F 2 "" H 5550 3650 50  0001 C CNN
-F 3 "" H 5550 3650 50  0001 C CNN
-	1    5550 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 3500 5550 3550
-Wire Wire Line
-	6500 3500 6500 3550
-Wire Wire Line
-	6500 3550 5550 3550
-Connection ~ 5550 3550
-Wire Wire Line
-	5550 3550 5550 3650
-Wire Wire Line
-	4700 2900 5450 2900
-Wire Wire Line
-	5450 2900 5450 3100
-Wire Wire Line
-	5550 3100 5550 2800
-Connection ~ 5550 2800
-Wire Wire Line
-	5550 2800 6200 2800
-Wire Wire Line
-	6400 3100 6400 2500
-Connection ~ 6400 2500
-Wire Wire Line
-	6400 2500 6700 2500
-Wire Wire Line
-	6500 3100 6500 2300
-Connection ~ 6500 2300
-Wire Wire Line
-	6500 2300 6700 2300
-Wire Wire Line
-	5250 3000 5250 2200
-Wire Wire Line
-	5250 2200 4700 2200
-$Comp
 L Connector:Micro_SD_Card J402
 U 1 1 5B67C82F
 P 3800 2600
@@ -290,8 +213,6 @@ F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 3800 2600 50  
 	1    3800 2600
 	-1   0    0    1   
 $EndComp
-Text Label 4750 2200 0    50   ~ 0
-DAT1
 Text Label 4750 2300 0    50   ~ 0
 DAT0
 Text Label 4750 2500 0    50   ~ 0
@@ -300,21 +221,18 @@ Text Label 4750 2700 0    50   ~ 0
 CMD
 Text Label 4750 2800 0    50   ~ 0
 CD
-Text Label 4750 2900 0    50   ~ 0
-DAT2
 Wire Wire Line
 	4700 2700 5950 2700
-Wire Wire Line
-	5250 3000 5650 3000
-Wire Wire Line
-	5650 3000 5650 3100
-Wire Wire Line
-	6600 3100 6600 2700
-Connection ~ 6600 2700
-Wire Wire Line
-	6600 2700 6700 2700
 Text Notes 3150 1550 0    50   ~ 0
 Configured in 1 line sd-card mode
-Text Notes 5750 3650 0    50   ~ 0
-Protection diodes optional
+Wire Wire Line
+	4700 2800 6200 2800
+Wire Wire Line
+	5950 2700 6700 2700
+Wire Wire Line
+	5450 2300 6700 2300
+Wire Wire Line
+	5700 2500 6700 2500
+NoConn ~ 4700 2200
+NoConn ~ 4700 2900
 $EndSCHEMATC
