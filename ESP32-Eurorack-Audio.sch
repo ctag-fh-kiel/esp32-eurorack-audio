@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-05-13"
+Date "2019-06-13"
 Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -232,7 +232,7 @@ U 1 1 5CD9B8CA
 P 1050 6300
 F 0 "FID1" H 1135 6346 50  0000 L CNN
 F 1 "Fiducial" H 1135 6255 50  0000 L CNN
-F 2 "" H 1050 6300 50  0001 C CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1050 6300 50  0001 C CNN
 F 3 "~" H 1050 6300 50  0001 C CNN
 	1    1050 6300
 	1    0    0    -1  
@@ -243,7 +243,7 @@ U 1 1 5CD9C1AA
 P 1050 6500
 F 0 "FID2" H 1135 6546 50  0000 L CNN
 F 1 "Fiducial" H 1135 6455 50  0000 L CNN
-F 2 "" H 1050 6500 50  0001 C CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1050 6500 50  0001 C CNN
 F 3 "~" H 1050 6500 50  0001 C CNN
 	1    1050 6500
 	1    0    0    -1  
@@ -254,7 +254,7 @@ U 1 1 5CD9C2A4
 P 1050 6700
 F 0 "FID3" H 1135 6746 50  0000 L CNN
 F 1 "Fiducial" H 1135 6655 50  0000 L CNN
-F 2 "" H 1050 6700 50  0001 C CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1050 6700 50  0001 C CNN
 F 3 "~" H 1050 6700 50  0001 C CNN
 	1    1050 6700
 	1    0    0    -1  

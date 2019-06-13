@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 8
 Title "ESP32 Eurorack Audio Module"
-Date "2019-05-13"
+Date "2019-06-13"
 Rev "D"
 Comp "(c) Robert Manzke 2019"
 Comment1 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -669,19 +669,6 @@ Text Notes 3850 3200 0    50   ~ 0
 ESR<=18mOhm!\n
 Text Notes 3450 2950 0    50   ~ 0
 1Watt!
-$Comp
-L Connector:TestPoint TP601
-U 1 1 5CA30973
-P 5100 2650
-F 0 "TP601" H 5158 2768 50  0000 L CNN
-F 1 "3V3D" H 5158 2677 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Keystone_5019_Minature" H 5300 2650 50  0001 C CNN
-F 3 "~" H 5300 2650 50  0001 C CNN
-	1    5100 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5100 2650 5100 2800
 Wire Wire Line
 	8450 1650 9350 1650
 Wire Wire Line
