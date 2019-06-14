@@ -1,12 +1,12 @@
 G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,(5.1.2)-1*
-G04 #@! TF.CreationDate,2019-05-17T09:26:27+02:00*
+G04 #@! TF.CreationDate,2019-06-14T11:55:17+02:00*
 G04 #@! TF.ProjectId,ESP32-Eurorack-Audio,45535033-322d-4457-9572-6f7261636b2d,D*
 G04 #@! TF.SameCoordinates,Original*
 G04 #@! TF.FileFunction,Soldermask,Top*
 G04 #@! TF.FilePolarity,Negative*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW (5.1.2)-1) date 2019-05-17 09:26:27*
+G04 Created by KiCad (PCBNEW (5.1.2)-1) date 2019-06-14 11:55:17*
 %MOMM*%
 %LPD*%
 G04 APERTURE LIST*
@@ -58,6 +58,9 @@ G04 APERTURE LIST*
 %ADD55C,0.300000*%
 G04 APERTURE END LIST*
 D10*
+X150111240Y-55617520D03*
+X176595820Y-123935900D03*
+X89809100Y-104047700D03*
 X91350000Y-66360000D03*
 X91350000Y-63820000D03*
 X91350000Y-61280000D03*
