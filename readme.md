@@ -8,6 +8,9 @@ Licensed under CC BY-NC-SA 4.0
 https://creativecommons.org/licenses/by-nc-sa/4.0/
 (C) Robert Manzke 2019
 
+## Known issues rev-c2
+- R704 and C702 designators swapped in top silkscreen
+
 ## Build instructions
 Will follow soon...
 
