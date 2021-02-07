@@ -1,5 +1,5 @@
 # ESP32 Eurorack Audio Synthesis Module
-Harware for Strämpler
+Hardware for Strämpler
 
 ## What it is
 Base board (design with KiCad) for using the ESP32 WROVER module in the context of real-time audio applications for eurorack synthesizer setups.
